@@ -41,3 +41,5 @@ if (params) {
   Bot.sendMessage("No params. Need another user TelegramID and amount of copper to transfer");
 }
 
+// @MingZih
+
