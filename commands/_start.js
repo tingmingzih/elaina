@@ -4,7 +4,7 @@
   need_reply: false
   auto_retry_time: 
   folder: 
-  answer: hello, i am Elaina. i have finally embarked on my long-awaited journey where i will meet many people and learn their unique stories. Throughout my journey, i will explore the world at its fullest, experiencing both its bright and dark sides, and beginning my legendary tale.
+  answer: hello, i am Elaina 👋🏻. i have finally embarked on my long-awaited journey where i will meet many people and learn their unique stories 📜. Throughout my journey, i will explore the world at its fullest rules 🌐, experiencing both its bright and dark sides , and beginning my legendary tale 📖.
 
   <<KEYBOARD
 

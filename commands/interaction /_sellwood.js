@@ -27,8 +27,8 @@ if (wood.value < minWood) {
   Bot.sendMessage(`You need at least ${minWood} wood to perform this action.`);
 } else {
   // randomly select the amount of copper and silver to add
-  const copperAmount = Math.floor(Math.random() * 5) + 1;
-  const silverAmount = Math.floor(Math.random() * 2) + 1;
+  const copperAmount = Math.floor(Math.random() * 5) + 3;
+  const silverAmount = Math.floor(Math.random() * 1) + 1;
 
   // calculate the amount of wood to remove (between 256 and 512)
   const woodToRemove = Math.floor(Math.random() * 257) + 256;
@@ -45,4 +45,3 @@ if (wood.value < minWood) {
   // tell the user what happened
   Bot.sendMessage(`Removed ${woodToRemove} woods 🪵, added ${copperAmount} copper coin 🟠 and ${silverAmount} silver coin ⚪️.`);
 }
-

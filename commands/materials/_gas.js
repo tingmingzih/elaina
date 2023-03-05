@@ -19,6 +19,9 @@ CMD*/
 let magic = Libs.ResourcesLib.userRes("magic");
 let gas = Libs.ResourcesLib.userRes("gas");
 
+// Add 20 prelevel to the user
+prelevel.add(20);
+
 // Check how many times the user can use the command based on their remaining magic
 let magicDrawsLeft = Math.floor(magic.value() / 25);
 
