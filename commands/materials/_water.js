@@ -12,7 +12,7 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: 💧 water
 CMD*/
 
 // Get the user's magic and water resources

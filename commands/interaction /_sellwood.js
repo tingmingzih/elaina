@@ -12,19 +12,19 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: 🪵 sell
 CMD*/
 
 // set the minimum amount of wood required
-const minWood = 512;
+const minWood = 500;
 
 // get the current amount of wood
 const wood = Libs.ResourcesLib.userRes("wood");
 
 // check if there is enough wood
-if (wood.value < minWood) {
+if (wood.value() < minWood) {
   // tell the user that there is not enough wood
-  Bot.sendMessage(`You need at least ${minWood} wood to perform this action.`);
+  Bot.sendMessage(`You need at least ${minWood} wood 🪵 to perform this action.`);
 } else {
   // randomly select the amount of copper and silver to add
   const copperAmount = Math.floor(Math.random() * 5) + 3;
@@ -45,3 +45,5 @@ if (wood.value < minWood) {
   // tell the user what happened
   Bot.sendMessage(`Removed ${woodToRemove} woods 🪵, added ${copperAmount} copper coin 🟠 and ${silverAmount} silver coin ⚪️.`);
 }
+
+// @MingZih

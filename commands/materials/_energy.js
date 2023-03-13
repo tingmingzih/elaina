@@ -12,7 +12,7 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: ⚡️ energy
 CMD*/
 
 // Get the user's magic and energy resources
