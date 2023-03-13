@@ -12,7 +12,7 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: 🪨 stone
 CMD*/
 
 // Get the user's magic and stone resources

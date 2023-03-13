@@ -12,13 +12,14 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: 🥐 food
 CMD*/
 
 // Define variables for the user's coins and health
 let copper = Libs.ResourcesLib.userRes("copper")
 let health = Libs.ResourcesLib.userRes("health")
 let prelevel = Libs.ResourcesLib.userRes("prelevel");
+let food = Libs.ResourcesLib.userRes("food")
 
 // Check if the user has at least 5 coins and maximum 100 health
 if (copper.value() >= 5 && health.value() < 100) {
@@ -31,6 +32,9 @@ if (copper.value() >= 5 && health.value() < 100) {
 // Add 20 prelevel to the user
   prelevel.add(20);
   
+// Add 1 food to the user
+  food.add(1);
+
   // Generate a list of 100 random food names
   let foodNames = ["bun", "cake", "bread", "cheese", "chocolate", "cookie", "croissant", "cupcake", "donut", "eggs", "fruit", "hamburger", "hot dog", "ice cream", "juice", "meat", "muffin", "noodles", "omelette", "pasta", "pizza", "popcorn", "potato", "rice", "salad", "sandwich", "soup", "steak", "sushi", "taco", "toast", "waffle", "watermelon"]
 

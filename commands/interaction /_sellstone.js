@@ -12,37 +12,38 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: 🪨 sell
 CMD*/
 
 // set the minimum amount of stone required
-var minstone = 512;
+const minstone = 500;
 
 // get the current amount of stone
-var stone = Libs.ResourcesLib.userRes("stone");
-
-// calculate the minimum amount of stone needed after removing some
-var minstoneAfterRemove = minstone + Math.floor(Math.random() * 257) + 256;
+const stone = Libs.ResourcesLib.userRes("stone");
 
 // check if there is enough stone
-if (stone.value < minstoneAfterRemove) {
+if (stone.value() < minstone) {
   // tell the user that there is not enough stone
-  Bot.sendMessage("You need at least " + minstone + " stone to perform this action.");
+  Bot.sendMessage(`You need at least ${minstone} stone 🪵 to perform this action.`);
 } else {
   // randomly select the amount of copper and silver to add
-  var copperAmount = Math.floor(Math.random() * 5) + 1;
-  var silverAmount = Math.floor(Math.random() * 2) + 1;
+  const copperAmount = Math.floor(Math.random() * 5) + 3;
+  const silverAmount = Math.floor(Math.random() * 1) + 1;
+
+  // calculate the amount of stone to remove (between 256 and 512)
+  const stoneToRemove = Math.floor(Math.random() * 257) + 256;
 
   // remove the stone
-  stone.remove(minstoneAfterRemove - minstone);
+  stone.remove(stoneToRemove);
 
   // add the copper and silver
-  var copper = Libs.ResourcesLib.userRes("copper");
-  var silver = Libs.ResourcesLib.userRes("silver");
+  const copper = Libs.ResourcesLib.userRes("copper");
+  const silver = Libs.ResourcesLib.userRes("silver");
   copper.add(copperAmount);
   silver.add(silverAmount);
 
   // tell the user what happened
-  Bot.sendMessage("Removed " + (minstoneAfterRemove - minstone) + " stones 🪨, added " + copperAmount + " copper coin 🟠 and " + silverAmount + " silver coin ⚪️.");
+  Bot.sendMessage(`Removed ${stoneToRemove} stones 🪵, added ${copperAmount} copper coin 🟠 and ${silverAmount} silver coin ⚪️.`);
 }
 
+// @MingZih

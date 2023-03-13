@@ -12,7 +12,7 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: 🛢 oil
 CMD*/
 
 // Get the user's magic and oil resources

@@ -12,7 +12,7 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: 🪵 wood
 CMD*/
 
 // Get the user's magic and wood resources

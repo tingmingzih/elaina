@@ -12,7 +12,7 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: 🔥 gas
 CMD*/
 
 // Get the user's magic and gas resources

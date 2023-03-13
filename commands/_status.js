@@ -12,7 +12,7 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: 🌟 status 🌟
 CMD*/
 
 // Define variables for the user's role, level, magic, and inventory resources, as well as for the various coin and material resources
@@ -33,6 +33,8 @@ let role = Libs.ResourcesLib.userRes("role")
 let travel = Libs.ResourcesLib.userRes("travel")
 let distance = Libs.ResourcesLib.userRes("distance")
 let health = Libs.ResourcesLib.userRes("health")
+let friend = Libs.ResourcesLib.userRes("friend")
+let accessories = Libs.ResourcesLib.userRes("accessories")
 
 // Format the values with commas for every thousand
 let formattedmagic = magic.value().toLocaleString()
@@ -46,6 +48,27 @@ let formattedcopper = copper.value().toLocaleString()
 let formattedsilver = silver.value().toLocaleString()
 let formattedgold = gold.value().toLocaleString()
 
+// Define the maximum level value
+const MAX_LEVEL = 100;
+
+// Define the average level value
+const AVG_LEVEL = 50;
+
+// Define display
+let display = "(min)";
+
+// Check if the level is already at max
+if (level.value() >= AVG_LEVEL) {
+  // Set the display variable to "full"
+  display = "(avg)";
+}
+
+// Check if the level is already at max
+if (level.value() >= MAX_LEVEL) {
+  // Set the display variable to "full"
+  display = "(max)";
+}
+
 // Calculate the total amount of materials the user has
 let totalMaterials =
   wood.value() +
@@ -54,6 +77,11 @@ let totalMaterials =
   gas.value() +
   energy.value() +
   water.value()
+
+// if level reach 100, and keep the level
+if (level.value() >= 100) {
+  level.set(100);
+}
 
 // Add 10 prelevel to the user
 prelevel.add(10);
@@ -89,9 +117,11 @@ console.log(role);
 Bot.sendMessage(
   "*status*:" +
     "\n🧙‍♀️ magic ability: " + role +
-    "\n📚 Level: " + level.value() + "." + prelevel.value() +
+    "\n📚 level: " + level.value() + "." + prelevel.value() + " " + display +
     "\n🪄 magic: " +
     formattedmagic +
+    "\n🫂 interaction: " + friend.value() +
+    "\n📿 accessories: " + accessories.value() +
     "\n♥️ health: " + health.value() + " %" +
     "\n🏯 country: " + travel.value() + " visited" +
     "\n🧹 travelled: " + distance.value() + " km" +
@@ -120,4 +150,3 @@ Bot.sendMessage(
 )
 
 // @MingZih
-
